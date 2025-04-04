@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpg" alt="Logo" class="logo" width="100" height="100">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Soft-ware Engineer</p>
+                <h1>Hi there, <span>I'm Sylvia Karanja, </span><br>Kenya</h1>
+            </div>
+        </div>
+
+    </div>
+    <!-- -----------about--------- --> 
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/pexels-anete-lusina-5240541.jpg" alt="About Me" class="about-img" width="400" height="400">
+
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a dedicated Software Engineering student passionate about building efficient and innovative solutions using code. I love exploring web development and problem-solving through programming, continuously improving my skills to create impactful digital experiences.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Web Development</li>
+                            <li><span>JavaScript</span><br>JavaScript</li>
+                            <li><span>Python</span><br>Python</li>
+                            <li><span>MySQL</span><br>MySQL</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2025</span><br>PLP Academy</li>
+                            <li><span>2025</span><br>PLP Academy</li>
+                            <li><span>2025</span><br>PLP Academy</li>
+                            <li><span>2025</span><br>PLP Academy</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- -----------projects--------- -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="projects-list">
+                <div>
+                <h2>Web development</h2>
+                <p>I created my first website. I was very excited to craete it using my learning at PLP</p>
+                <a href="https://github.com/PLP-Database-Design/wk-3a-Sylvia-Kui.git">Click here to view</a>
+                </div>
+                <div>
+                <h2>Calculator</h2>
+                <p>I created a calculator using python. It was so fun and exciting.</p>
+                <a href="https://github.com/Sylvia-Kui/python-wk-1-assignment.git">Click here to view</a>
+                </div>
+            </div>
+        </div>
+<!-----------interests---------- -->
+<div id="interests">
+    <div class="container">
+        <h1 class="sub-title">Interests</h1>
+        <div class="interests-list">
+            <div>
+                <h2>Web Development</h2>
+                <p>I love creating websites and web applications. I enjoy the process of designing and coding.</p>
+            </div>
+            <div>
+                <h2>Reading</h2>
+                <p>I enjoy reading books, especially fiction and technology-related topics.</p>
+            </div>
+            <div>
+                <h2>Traveling</h2>
+                <p>I love exploring new places and experiencing different cultures.</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- -----------contact--------- -->
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-sharp fa-regular fa-paper-plane"></i> wanguisylvia59@gmail.com</p>
+                    <p><i class="fa-sharp fa-regular fa-circle-phone-hangup"></i> 0757290892</p>
+
+                </div>
+                <a href="images/Sylvia CV.pdf" download class="btn btn2">Download CV</a>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Name" placeholder="Your Email" required>
+                        <textarea rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>All rights reserved. 2025</p>
+        </div>
+     </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    
+</body>
+</html>
